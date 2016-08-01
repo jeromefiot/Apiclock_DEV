@@ -28,9 +28,8 @@ mpd_player = PersistentMPDClient()
 @main.before_request
 def mpd_status():
     if current_user.is_authenticated():
-        mpd_status = mpd_player.is_playing()
-        print "zobi ---------------------------------------"
-        print mpd_player.status()['state']
+        if mpd_player.status()['state'] == 'play':
+            mpd_status = True
 
 
 @main.route('/login', methods=['GET', 'POST'])
