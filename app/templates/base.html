@@ -62,15 +62,15 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
 
-                        <li><a href="{{ url_for('main.dashboard', action='1', musique='0') }}" class="btn btn-primary btn-lg active" role="button">Play</a></li>
-                        <li><a href="{{ url_for('main.dashboard', action='0', musique='0') }}" class="btn btn-default btn-lg active" role="button">Stop</a></li>
-                        <li><a href="{{ url_for('main.dashboard', action='2', musique='0') }}" class="btn btn-primary btn-lg active" role="button"> + Fort </a></li>
-                        <li><a href="{{ url_for('main.dashboard', action='3', musique='0') }}" class="btn btn-default btn-lg active" role="button"> - Fort </a></li>
+                        <li><a href="{{ url_for('main.dashboard', action='1', musique='0') }}">Play</a></li>
+                        <li><a href="{{ url_for('main.dashboard', action='0', musique='0') }}">Stop</a></li>
+                        <li><a href="{{ url_for('main.dashboard', action='2', musique='0') }}"> + Fort </a></li>
+                        <li><a href="{{ url_for('main.dashboard', action='3', musique='0') }}"> - Fort </a></li>
                         <!-- <a href="{{ url_for('main.dashboard', action='4', musique='0') }}" class="btn btn-default btn-lg active" role="button"> current </a> -->
                         {% if mpd_status %}
-                            <li><h2 style="display:inline;"><span class="label label-success">MPD ON</span></h2></li>
+                            <li><span class="label label-success">MPD ON</span></li>
                         {% else %}
-                            <li><h2 style="display:inline;"><span class="label label-default" >MPD OFF</span></h2></li>
+                            <li><span class="label label-default" >MPD OFF</span></li>
                         {% endif %}
 
                         {# MPD status #}
