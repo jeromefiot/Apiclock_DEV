@@ -32,6 +32,8 @@ def mpd_status():
     if current_user.is_authenticated():
         if mpd_player.status()['state'] == 'play':
             player_status = True
+        else:
+            player_status = False
     print player_status
     print type(player_status)
 
