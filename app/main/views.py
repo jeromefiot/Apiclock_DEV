@@ -30,6 +30,9 @@ def mpd_status():
     if current_user.is_authenticated():
         if mpd_player.status()['state'] == 'play':
             mpd_status = True
+        else:
+            mpd_status = False
+    print mpd_status
 
 
 @main.route('/login', methods=['GET', 'POST'])
