@@ -30,7 +30,7 @@ def mpd_status():
     if current_user.is_authenticated():
         mpd_status = mpd_player.is_playing()
         print "zobi ---------------------------------------"
-        print mpd_status.is_playing()
+        print mpd_player.status()['state']
 
 
 @main.route('/login', methods=['GET', 'POST'])
