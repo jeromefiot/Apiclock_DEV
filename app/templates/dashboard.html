@@ -32,32 +32,6 @@
                    $("#form1-musics").hide();
                 }
             });
-
-            $("#form_chrono-radios").show();
-            $("#form_chrono-podcasts").hide();
-            $("#form_chrono-musics").hide();
-
-            $("#form_chrono-media").change(function() {
-                if ($("#form_chrono-media").val() == "1"){
-                    $("#form_chrono-radios").show();
-                    $("#form_chrono-podcasts").hide();
-                    $("#form_chrono-musics").hide();
-                    // get selected menu value
-                    //TEST = $('#form1-radios option:selected').val();
-                } else if ($("#form_chrono-media").val() == "2") {
-                   $("#form_chrono-radios").hide();
-                   $("#form_chrono-podcasts").show();
-                   $("#form_chrono-musics").hide();
-                } else if ($("#form_chrono-media").val() == "3") {
-                   $("#form_chrono-radios").hide();
-                   $("#form_chrono-podcasts").hide();
-                   $("#form_chrono-musics").show();
-                } else {
-                   $("#form_chrono-radios").hide();
-                   $("#form_chrono-podcasts").hide();
-                   $("#form_chrono-musics").hide();
-                }
-            });
         });
     </script>
 {% endblock %}
@@ -79,7 +53,7 @@
 </div>
 
 
-<div class="col-md-3">
+<div class="col-md-6">
     <h2>PLAY <a href="{{ url_for('radio.index') }}" class="btn btn-success" role="button">Add media</a></h2>
     <div class="well well-sm" style="min-height: 250px">
     <form id="baseform" action="" method="post" class="form" role="form">
@@ -125,7 +99,7 @@
     </div>
 </div>
 
-<div class="col-md-3">
+<div class="col-md-6">
     <h2>ALARMS <a href="{{ url_for('alarm.index') }}" class="btn btn-success active" role="button">Add alarm</a></h2>
     <div class="well well-sm" style="min-height: 250px">
         <!-- Nous sommes  moment().format('dddd(E) - h:m') <br/> -->
