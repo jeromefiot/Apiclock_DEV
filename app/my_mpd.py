@@ -190,10 +190,11 @@ class PersistentMPDClient(mpd.MPDClient):
         def function():
             """get player status."""
             status_check = self.status()
-            if status_check['state'] == 'stop':
-                statut_player=False
-            else:
-                statut_player=True
+            return status_check['state']
+            # if status_check['state'] == 'stop':
+            #     statut_player=False
+            # else:
+            #     statut_player=True
 
         result = self.try_cmd(function())
         return result
