@@ -30,9 +30,7 @@ mpd_status = ""
 def mpd_status():
     if current_user.is_authenticated():
         if mpd_player.status()['state'] == 'play':
-            global mpd_status = True
-        else:
-            global mpd_status = False
+            global mpd_status is True
     print mpd_status
 
 
