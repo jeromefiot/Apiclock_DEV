@@ -61,7 +61,7 @@
                         <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-
+                        test
                         <li><a href="{{ url_for('main.dashboard', action='1', musique='0') }}">Play</a></li>
                         <li><a href="{{ url_for('main.dashboard', action='0', musique='0') }}">Stop</a></li>
                         <li><a href="{{ url_for('main.dashboard', action='2', musique='0') }}"> + Fort </a></li>
@@ -74,7 +74,7 @@
                             <li><a href="#" style="background-color:#333333;">MPD OFF</a></li>
                         {% endif %}
 
-                    <li class="dropdown">
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="{{ current_user.gravatar(size=18) }}">
                                 Account <b class="caret"></b>
