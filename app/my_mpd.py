@@ -14,8 +14,6 @@ class PersistentMPDClient(mpd.MPDClient):
         self.socket = socket
         self.host = "127.0.0.1"
         self.port = 6600
-        self.statut_player = ""
-
 
         self.do_connect()
         # get list of available commands from client
@@ -193,9 +191,9 @@ class PersistentMPDClient(mpd.MPDClient):
             """get player status."""
             status_check = self.status()
             if status_check['state'] == 'stop':
-                self.statut_player=False
+                statut_player=False
             else:
-                self.statut_player=True
+                statut_player=True
 
         result = self.try_cmd(function())
         return result
