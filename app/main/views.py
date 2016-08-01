@@ -29,6 +29,7 @@ mpd_player = PersistentMPDClient()
 def mpd_status():
     if current_user.is_authenticated():
         mpd_status = mpd_player.is_playing()
+        print "zobi ---------------------------------------"
         print mpd_status
 
 
