@@ -242,8 +242,8 @@ def dashboard(action,
 
     else:
         return render_template('dashboard.html', form1=form1,
-                               form_chrono=form_chrono,
-                               formsnooze=formsnooze,
+                            #    form_chrono=form_chrono,
+                            #    formsnooze=formsnooze,
                                alarms=alarms,
                                )
 
