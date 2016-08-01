@@ -34,8 +34,6 @@ def mpd_status():
             player_status = True
         else:
             player_status = False
-    print player_status
-    print type(player_status)
 
 
 @main.route('/login', methods=['GET', 'POST'])
