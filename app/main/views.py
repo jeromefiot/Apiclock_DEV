@@ -207,7 +207,7 @@ def dashboard(action,
 
     else:
         return render_template('dashboard.html', form1=form1,
-                               mpd_status=MPDstatut,
+                               mpd_status=mpd_status,
                             #    form_chrono=form_chrono,
                             #    formsnooze=formsnooze,
                                alarms=alarms,
