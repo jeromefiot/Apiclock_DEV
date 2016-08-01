@@ -29,9 +29,9 @@ mpd_player = PersistentMPDClient()
 def mpd_status():
     if current_user.is_authenticated():
         if mpd_player.status()['state'] == 'play':
-            mpd_status = True
+            mpd_status = 'play'
         else:
-            mpd_status = False
+            mpd_status = 'stop'
     print mpd_status
 
 
