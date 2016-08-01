@@ -61,7 +61,6 @@
                         <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        test
                         <li><a href="{{ url_for('main.dashboard', action='1', musique='0') }}">Play</a></li>
                         <li><a href="{{ url_for('main.dashboard', action='0', musique='0') }}">Stop</a></li>
                         <li><a href="{{ url_for('main.dashboard', action='2', musique='0') }}"> + Fort </a></li>
@@ -108,9 +107,11 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_administrator() %}
-
+                    <li><a href="{{ url_for('main.dashboard', action='1', musique='0') }}">Play</a></li>
+                    <li><a href="{{ url_for('main.dashboard', action='0', musique='0') }}">Stop</a></li>
+                    <li><a href="{{ url_for('main.dashboard', action='2', musique='0') }}"> + Fort </a></li>
+                    <li><a href="{{ url_for('main.dashboard', action='3', musique='0') }}"> - Fort </a></li>
                     {# MPD status #}
-                    {{ mpd_status }}
                     {% if mpd_status %}
                         <li><a href="#" style="background-color:yellow;">MPD ON</a></li>
                     {% else %}
