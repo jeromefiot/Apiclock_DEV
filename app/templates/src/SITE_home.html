@@ -1,0 +1,445 @@
+{% extends "src/APP_base_menu.html" %}
+
+{% block title %} APIclock - Home {% endblock %}
+
+{% block page_content %}
+  <div class="row">
+
+      <!--
+***********************************************************
+      PLAY BLOC
+***********************************************************
+      -->
+      <div class="col-lg-4">
+          <h1> PLAY </h1>
+          <section class="panel panel-default" style="min-height:320px;">
+
+            <div class="panel-body" style="min-height:240px;">
+              <div class="clearfix text-center m-t">
+                <select class="form-control m-b" name="account">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                </select>
+                <select class="form-control m-b" name="account">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                </select>
+              </div>
+            </div>
+
+            <footer class="panel-footer bg-info text-center" style="min-height:80px;">
+                <div class="m-b-sm">
+                <div class="col-lg-8" style="padding:0;">
+                    <div class="m-b-sm">
+                        <div class="btn-group btn-group-justified">
+                            <a class="btn btn-primary" style="height:60px;" href="#">Play</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" style="padding:0;">
+                    <div class="m-b-sm">
+                        <div class="btn-group btn-group-justified">
+                            <a class="btn btn-success" style="height:60px;" href="#">Add</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </footer>
+
+          </section>
+      </div>
+
+      <!--
+***********************************************************
+      END PLAY // CHRONO BLOC
+***********************************************************
+      -->
+      <div class="col-lg-4">
+          <h1> CHRONO </h1>
+          <section class="panel panel-default" style="min-height:320px;">
+
+            <div class="panel-body" style="min-height:240px;">
+              <div class="clearfix text-center m-t">
+                <select class="form-control m-b" name="account">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                </select>
+                <select class="form-control m-b" name="account">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                </select>
+                <select class="form-control m-b" name="account">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                </select>
+              </div>
+            </div>
+
+            <footer class="panel-footer bg-info text-center" style="min-height:80px;">
+                <div class="m-b-sm">
+                <div class="col-lg-12" style="padding:0;">
+                    <div class="m-b-sm">
+                        <div class="btn-group btn-group-justified">
+                            <a class="btn btn-primary" style="height:60px;" href="#">GO CHRONO</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </footer>
+
+          </section>
+      </div>
+
+      <!--
+      ***********************************************************
+      END CHRONO // SNOOZE BLOC
+      ***********************************************************
+      -->
+      <div class="col-lg-4">
+          <h1> SNOOZE </h1>
+          <section class="panel panel-default" style="min-height:320px;">
+
+            <div class="panel-body" style="min-height:240px;">
+              <div class="clearfix text-center m-t">
+                <select class="form-control m-b" name="account">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                </select>
+                <select class="form-control m-b" name="account">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                </select>
+              </div>
+            </div>
+
+            <footer class="panel-footer bg-info text-center" style="min-height:80px;">
+                <div class="m-b-sm">
+                <div class="col-lg-12" style="padding:0;">
+                    <div class="m-b-sm">
+                        <div class="btn-group btn-group-justified">
+                            <a class="btn btn-primary" style="height:60px;" href="#">GO SNOOZE</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </footer>
+
+          </section>
+      </div>
+      <!--
+      ***********************************************************
+      END SNOOZE BLOC // LIST ALARM
+      ***********************************************************
+      -->
+
+            <section class="panel panel-default">
+                <header class="panel-heading">
+                <h1> ALARMS </h1>
+                </header>
+                <div class="row wrapper">
+                  <div class="col-sm-5 m-b-xs">
+                    <select class="input-sm form-control input-s-sm inline v-middle">
+                      <option value="0">Bulk action</option>
+                      <option value="1">Delete selected</option>
+                      <option value="2">Bulk edit</option>
+                      <option value="3">Export</option>
+                    </select>
+                    <button class="btn btn-sm btn-default">Apply</button>
+                  </div>
+                  <div class="col-sm-4 m-b-xs">
+                    <div data-toggle="buttons" class="btn-group">
+                      <label class="btn btn-sm btn-default active">
+                        <input type="radio" name="options"> Day
+                      </label>
+                      <label class="btn btn-sm btn-default">
+                        <input type="radio" name="options"> Week
+                      </label>
+                      <label class="btn btn-sm btn-default">
+                        <input type="radio" name="options"> Month
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="input-group">
+                      <input type="text" placeholder="Search" class="input-sm form-control">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-sm btn-default">Go!</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-striped b-t b-light">
+                    <thead>
+                      <tr>
+                        <th style="width:20px;"><label class="checkbox m-n i-checks"><input type="checkbox"><i></i></label></th>
+                        <th data-toggle="class" class="th-sortable">Project
+                          <span class="th-sort">
+                            <i class="fa fa-sort-down text"></i>
+                            <i class="fa fa-sort-up text-active"></i>
+                            <i class="fa fa-sort"></i>
+                          </span>
+                        </th>
+                        <th>Task</th>
+                        <th>Date</th>
+                        <th style="width:30px;"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>Idrawfast</td>
+                        <td>4c</td>
+                        <td>Jul 25, 2013</td>
+                        <td>
+                          <a data-toggle="class" class="active" href="#"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>Formasa</td>
+                        <td>8c</td>
+                        <td>Jul 22, 2013</td>
+                        <td>
+                          <a data-toggle="class" href="#"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>Avatar system</td>
+                        <td>15c</td>
+                        <td>Jul 15, 2013</td>
+                        <td>
+                          <a data-toggle="class" class="active" href="#"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>Throwdown</td>
+                        <td>4c</td>
+                        <td>Jul 11, 2013</td>
+                        <td>
+                          <a data-toggle="class" class="active" href="#"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>Idrawfast</td>
+                        <td>4c</td>
+                        <td>Jul 7, 2013</td>
+                        <td>
+                          <a data-toggle="class" class="active" href="#"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>Formasa</td>
+                        <td>8c</td>
+                        <td>Jul 3, 2013</td>
+                        <td>
+                          <a data-toggle="class" class="active" href="#"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>Avatar system</td>
+                        <td>15c</td>
+                        <td>Jul 2, 2013</td>
+                        <td>
+                          <a data-toggle="class" class="active" href="#"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label class="checkbox m-n i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
+                        <td>Videodown</td>
+                        <td>4c</td>
+                        <td>Jul 1, 2013</td>
+                        <td>
+                          <a data-toggle="class" class="active" href="#"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <footer class="panel-footer">
+                  <div class="row">
+                    <div class="col-sm-4 hidden-xs">
+                      <select class="input-sm form-control input-s-sm inline v-middle">
+                        <option value="0">Bulk action</option>
+                        <option value="1">Delete selected</option>
+                        <option value="2">Bulk edit</option>
+                        <option value="3">Export</option>
+                      </select>
+                      <button class="btn btn-sm btn-default">Apply</button>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                      <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small>
+                    </div>
+                    <div class="col-sm-4 text-right text-center-xs">
+                      <ul class="pagination pagination-sm m-t-none m-b-none">
+                        <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </footer>
+              </section>
+
+      <!--
+      ***********************************************************
+      END LIST ALARM
+      ***********************************************************
+      -->
+
+    <div class="panel bg-primary lt no-borders">
+        <div class="panel-body">
+            <span class="timeline-icon"><i class="fa fa-bell-o time-icon bg-primary"></i></span>
+            <span class="timeline-date">7:30 am</span>
+            <div class="text-sm">
+                Wake up
+            </div>
+            <h5>Me</h5>
+            <div class="m-t-sm timeline-action">
+                <span class="h3 pull-left m-r-sm">4:51</span>
+                <button class="btn btn-sm btn-default btn-bg"><i class="fa fa-pause"></i> Pause</button>
+                <button class="btn btn-sm btn-default btn-bg"><i class="fa fa-check"></i> Confirm</button>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- <section class="panel panel-default">
+        <header class="panel-heading bg-light">
+        <a data-toggle="tab" href="#base" ><i class="fa fa-user text-muted"></i> TEST</a>
+          <ul class="nav nav-tabs pull-right">
+            <li class=""><a data-toggle="tab" href="#play"><i class="fa fa-comments text-muted"></i> PLAY</a></li>
+            <li class=""><a data-toggle="tab" href="#chrono"><i class="fa fa-user text-muted"></i> CHRONO</a></li>
+            <li class=""><a data-toggle="tab" href="#snooze"><i class="fa fa-cog text-muted"></i> SNOOZE</a></li>
+          </ul>
+
+        </header>
+
+        <div class="panel-body">
+          <div class="tab-content">
+              <div id="base" class="tab-pane">
+                  <div class="clearfix text-center m-t">
+                    TEST et auhzfkbn
+                  </div>
+              </div>
+            <div id="play" class="tab-pane">
+                <div class="clearfix text-center m-t">
+                  <select class="form-control m-b" name="account">
+                      <option>option 1</option>
+                      <option>option 2</option>
+                      <option>option 3</option>
+                      <option>option 4</option>
+                  </select>
+                  <select class="form-control m-b" name="account">
+                      <option>option 1</option>
+                      <option>option 2</option>
+                      <option>option 3</option>
+                      <option>option 4</option>
+                  </select>
+                </div>
+            </div>
+            <div id="chrono" class="tab-pane">
+                profile
+            </div>
+            <div id="snooze" class="tab-pane active">
+                settings
+            </div>
+          </div>
+      </div>
+      </section> -->
+
+<div class="col-lg-12">
+     <div id="accordion2" class="panel-group m-b">
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a href="#collapseOne" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle collapsed">
+                <h1> PLAY </h1>
+              </a>
+            </div>
+            <div class="panel-collapse collapse" id="collapseOne" style="height: 0px;">
+              <div class="panel-body text-sm">
+
+                  <form role="form" class="form-inline">
+
+                      <div class="radio i-checks">
+                          <label>
+                            <input type="radio" value="option1" name="a">
+                            <i></i>
+                            Option one
+                          </label>
+                          <label>
+                            <input type="radio" checked="" value="option2" name="a">
+                            <i></i>
+                            Option two checked
+                          </label>
+                      </div>
+
+                      <div class="checkbox m-l m-r-xs">
+                        <label class="i-checks">
+                          <input type="checkbox"><i></i> Remember me
+                        </label>
+                      </div>
+                      <button class="btn btn-default" type="submit">Sign in</button>
+                      <a data-toggle="modal" class="btn btn-success" href="#modal-form">Form in a modal</a>
+                    </form>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a href="#collapseTwo" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle collapsed">
+                <h1> CHRONO </h1>
+              </a>
+            </div>
+            <div class="panel-collapse collapse" id="collapseTwo" style="height: 0px;">
+              <div class="panel-body text-sm">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a href="#collapseThree" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle collapsed">
+                <h1>SNOOZE</h1>
+              </a>
+            </div>
+            <div class="panel-collapse collapse" id="collapseThree" style="height: 0px;">
+              <div class="panel-body text-sm">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+
+    </div>
+</div>
+
+  </div>
+
+  {% endblock %}

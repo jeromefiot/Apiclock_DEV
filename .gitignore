@@ -1,0 +1,12 @@
+# Ignorer fichiers pyc, sqlite, cfg
+#
+*.pyc
+*.sqlite
+*.cfg
+*.geany
+/app/static/music/*
+/app/templates/src/base/*
+/tmp
+
+run.py
+config.py

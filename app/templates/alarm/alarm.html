@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Apiclock - Alarm{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <script language="javascript">//<![CDATA[
+        $(document).ready(function() {
+            $("#form1-radios").show();
+            $("#form1-podcasts").hide();
+            $("#form1-musics").hide();
+
+            $("#form1-media").change(function() {
+                if ($("#form1-media").val() == "1"){
+                    $("#form1-radios").show();
+                    $("#form1-podcasts").hide();
+                    $("#form1-musics").hide();
+                } else if ($("#form1-media").val() == "2") {
+                   $("#form1-radios").hide();
+                   $("#form1-podcasts").show();
+                   $("#form1-musics").hide();
+                } else if ($("#form1-media").val() == "3") {
+                   $("#form1-radios").hide();
+                   $("#form1-podcasts").hide();
+                   $("#form1-musics").show();
+                } else {
+                   $("#form1-radios").hide();
+                   $("#form1-podcasts").hide();
+                   $("#form1-musics").hide();
+                }
+            });
+        });
+        //]]>
+    </script>
+{% endblock %}
+
+{% block page_content %}
+
+<div class="bs-example add_media">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">ADD ALARM (complete form)</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+		    {{ wtf.quick_form(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+    <form action="" method="post" class="form" role="form">
+        {{ form.hidden_tag() }}
+
+        {{ wtf.form_field(form.heures) }}
+        {{ wtf.form_field(form.minutes) }}
+
+        {{ wtf.form_field(form.Radio) }}
+        {{ wtf.form_field(form.musics) }}
+
+        {{ wtf.form_field(form.submit) }}
+    </form>
+
+<hr>
+
+<h2>ALARMES</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Days</th>
+                <th>Frequency</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for alarm in alarms %}
+            <tr>
+                <td>{{ alarm.namealarme }}</td>
+                <td>{{ alarm.days }}</td>
+                <td>{{ alarm.frequence }}</td>
+                <td>
+                    {% if alarm.state == 1 %}
+                        <a href="{{url_for('alarm.index', action='3', idr=alarm.id)}}" class="btn btn-danger btn-sm active"
+                       role="button">Desactiver</a>
+                    {% else %}
+                        <a href="{{url_for('alarm.index', action='3', idr=alarm.id)}}" class="btn btn-success btn-sm active"
+                       role="button">Activer</a>
+                    {% endif %}
+                    <a href="{{url_for('alarm.index', action='1', idr=alarm.id)}}" class="btn btn-danger btn-sm active"
+                       role="button">Supprimer</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody
+    </table>
+<br/>
+
+<script src="{{ url_for('static', filename='js/nlform.js') }}"></script>
+<script>
+    var nlform = new NLForm(document.getElementById( 'nl-form' ));
+</script>
+
+{% endblock %}
