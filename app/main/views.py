@@ -153,44 +153,6 @@ def dashboard(action,
 
     alarms = Alarm.query.filter_by(users=current_user.id).all()
     form1 = playerForm(prefix="form1")
-    # formsnooze = snoozeForm()
-    # form_chrono = ChronoForm(prefix="form_chrono")
-
-    # if formsnooze.submitsnooze.data:
-    #     """Get radio by id and return url."""
-    #     radiosnooze = formsnooze.radiosnooze.data
-    #     radiosnooze = Music.query.filter(Music.id == radiosnooze).first()
-    #     radiosnooze = radiosnooze.url
-    #     minutessnooze = int(formsnooze.minutessnooze.data)
-    #     snooze(radiosnooze, minutessnooze)
-    #     return redirect(url_for('.dashboard'))
-
-    # elif form_chrono.submit.data:
-    #     """CHRONO : Depending on media type, get id and then request for url"""
-    #     delay_chrono = int(form_chrono.chrono_minutes.data)
-    #
-    #     if form_chrono.radio.data != "0":
-    #         """
-    #         launch chrono (func and thread) with radio url
-    #         and choosen delay.
-    #         """
-    #         mediaid = form_chrono.radio.data
-    #         choosen_media = Music.query.filter(Music.id == mediaid).first()
-    #         Chrono(choosen_media.url, delay_chrono)
-    #
-    #     elif form_chrono.radio.data == "0" and form_chrono.music.data != "0":
-    #         """launch chrono (func and thread) with music and choosen delay"""
-    #         mediaid = form_chrono.music.data
-    #         choosen_media = Music.query.filter(Music.id == mediaid).first()
-    #         Chrono(choosen_media.url, delay_chrono)
-    #
-    #     elif form_chrono.radio.data == "0" and form_chrono.music.data == "0":
-    #         """Check form validity : no missing values."""
-    #         mediaid = "0"
-    #         flash("No media selected, please select a radio or music !")
-    #     else:
-    #         flash("No media selected, please select a radio or music !")
-    #     return redirect(url_for('.dashboard'))
 
     if form1.submit.data:
         """PLAY : Depending on media type, get id and then request for url."""
@@ -242,6 +204,7 @@ def dashboard(action,
 
     else:
         return render_template('dashboard.html', form1=form1,
+                               mpd_status=MPDstatut,
                             #    form_chrono=form_chrono,
                             #    formsnooze=formsnooze,
                                alarms=alarms,
