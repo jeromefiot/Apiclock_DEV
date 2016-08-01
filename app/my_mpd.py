@@ -66,12 +66,12 @@ class PersistentMPDClient(mpd.MPDClient):
     def do_connect(self):
         try:
             try:
-            #                print("Attempting to disconnect.")
+            # print("Attempting to disconnect.")
                 self.disconnect()
             # if it's a TCP connection, we'll get a socket error
             # if we try to disconnect when the connection is lost
             except mpd.ConnectionError as e:
-                #                print("Disconnect failed, so what?")
+                # print("Disconnect failed, so what?")
                 pass
             # if it's a socket connection, we'll get a BrokenPipeError
             # if we try to disconnect when the connection is lost
@@ -198,4 +198,3 @@ class PersistentMPDClient(mpd.MPDClient):
 
         result = self.try_cmd(function())
         return result
-

@@ -16,11 +16,13 @@ from ..decorators import admin_required
 from ..login_nav import LoginFormNav
 from ..functions import snooze, Chrono
 
+
+# mpd_player = player()
+mpd_player = PersistentMPDClient()
+
 # ========================================
 # ============= PUBLIC PAGES  ============
 # ========================================
-# mpd_player = player()
-mpd_player = PersistentMPDClient()
 
 
 @main.before_request
