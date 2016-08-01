@@ -19,6 +19,7 @@ from ..functions import snooze, Chrono
 
 # mpd_player = player()
 mpd_player = PersistentMPDClient()
+mpd_status = ""
 
 # ========================================
 # ============= PUBLIC PAGES  ============
@@ -29,9 +30,9 @@ mpd_player = PersistentMPDClient()
 def mpd_status():
     if current_user.is_authenticated():
         if mpd_player.status()['state'] == 'play':
-            mpd_status = True
+            global mpd_status = True
         else:
-            mpd_status = False
+            global mpd_status = False
     print mpd_status
 
 
@@ -207,7 +208,7 @@ def dashboard(action,
 
     else:
         print "=============="
-        print mpd_status
+        print mpd_status()
         print "=============="
         return render_template('dashboard.html', form1=form1,
                                mpd_status=mpd_status,
