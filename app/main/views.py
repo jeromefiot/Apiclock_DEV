@@ -206,6 +206,9 @@ def dashboard(action,
         return redirect(url_for('.dashboard'))
 
     else:
+        print "=============="
+        print mpd_status
+        print "=============="
         return render_template('dashboard.html', form1=form1,
                                mpd_status=mpd_status,
                             #    form_chrono=form_chrono,
