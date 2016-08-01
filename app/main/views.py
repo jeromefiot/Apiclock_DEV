@@ -19,7 +19,7 @@ from ..functions import snooze, Chrono
 
 # mpd_player = player()
 mpd_player = PersistentMPDClient()
-mpd_status = ""
+player_status = ""
 
 # ========================================
 # ============= PUBLIC PAGES  ============
@@ -28,12 +28,12 @@ mpd_status = ""
 
 @main.before_request
 def mpd_status():
-    global mpd_status
+    global player_status
     if current_user.is_authenticated():
         if mpd_player.status()['state'] == 'play':
-            mpd_status = True
-    print mpd_status
-    print type(mpd_status)
+            player_status = True
+    print player_status
+    print type(player_status)
 
 
 @main.route('/login', methods=['GET', 'POST'])
@@ -208,7 +208,7 @@ def dashboard(action,
 
     else:
         return render_template('dashboard.html', form1=form1,
-                               mpd_status=mpd_status,
+                               mpd_status=player_status,
                             #    form_chrono=form_chrono,
                             #    formsnooze=formsnooze,
                                alarms=alarms,
