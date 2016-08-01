@@ -31,7 +31,7 @@ def mpd_status():
         mpd_status = mpd_player.is_playing()
         print "zobi ---------------------------------------"
         print mpd_status
-        print statut_player
+        print mpd_status.statut_player
 
 
 @main.route('/login', methods=['GET', 'POST'])
