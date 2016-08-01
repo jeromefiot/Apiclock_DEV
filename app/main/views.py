@@ -28,9 +28,10 @@ mpd_status = ""
 
 @main.before_request
 def mpd_status():
+    global mpd_status
     if current_user.is_authenticated():
         if mpd_player.status()['state'] == 'play':
-            global mpd_status is True
+            mpd_status = True
     print mpd_status
 
 
